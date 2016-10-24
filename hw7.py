@@ -48,9 +48,9 @@ sets = {
             'h s s s s s s',
             'G ? G g g χ q',
         ], 18: [
-            'ts tʃ tʃ tʃ tʃ tʃ tʃ\'',
+            'ts tʃ tʃ tʃ tʃ tʃ tʃ',
         ], 19: [
-           'ts tʃ tʃ tʃ tʃ tʃ tʃ\'',
+           'ts tʃ tʃ tʃ tʃ tʃ tʃ',
         ], 20: [
             'ts tʃ tʃ tʃ tʃ tʃ tʃ',
         ], 21: [
@@ -68,7 +68,7 @@ sets = {
             'ts tʃ tʃ tʃ ʃ tʃ s',
             'p p p p p p ph',
         ], 26: [
-            'k k k k k k k\'',
+            'k k k k k k k',
             'ts tʃ tʃ tʃ ʃ tʃ s',
             'k k k k k k k',
         ], 27: [
@@ -85,7 +85,7 @@ sets = {
         ], 32: [
             'ʃ ʃ ʃ ʃ - s s',
             'lj lj ʃ dʒ - lj lj',
-            'k k k k - k k\'',
+            'k k k k - k k',
         ], 33: [
             'ʃ ʃ ʃ ʃ ʃ s s',
         ], 34: [
@@ -99,5 +99,5 @@ sets = {
             'ts tʃ tʃ tʃ tʃ tʃ tʃ',
         ], 37: [
             'h h - 0 h h h',
-            'p p - b b p p\'',
+            'p p - b b p p',
 ]}
