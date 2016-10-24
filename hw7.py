@@ -6,7 +6,7 @@ sets = {
         ], 2: [
             'p p p p p p p',
         ], 3: [
-            'p p p - p ɸ p',
+            'p p p p - p ɸ',
         ], 4: [
             'p p p p p p p',
             'p p b b b p p',
