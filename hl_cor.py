@@ -43,17 +43,17 @@ def collapse(d):
                 collapsed[phoneset].append(num)
                 continue
 
-            # check for a partial match
-            merge = False
-            for k in collapsed:
-                merge = try_merge_similar(phoneset, k)
-                if merge:
-                    nums = collapsed[k][:]
-                    del collapsed[k]
-                    collapsed[merge] = nums
-                    collapsed[merge].append(num)
-                    break
-            if merge:
+            # check for partial matches
+            merges = [ (try_merge_similar(phoneset, k), k) for k in collapsed ]
+            merges = list(filter(lambda x: x[0], merges))
+
+            # 2+ matches and the merge is ambiguous, so only merge when sure
+            if len(merges) == 1:
+                new, old = merges[0]
+                nums = collapsed[old][:]
+                del collapsed[old]
+                collapsed[new] = nums
+                collapsed[new].append(num)
                 continue
 
             # no match found
@@ -64,9 +64,7 @@ def collapse(d):
 
 def hlsort(d) -> [('a b c d', [1, 2, 3, 4])]:
 
-    # { phone: (count of phone, soundset, instances) }
     soundsets_by_phone = dict()
-
     SSInfo = namedtuple('SSInfo', 'count soundset instances'.split())
 
     # group soundsets by most common phone
